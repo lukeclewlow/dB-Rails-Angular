@@ -1,10 +1,20 @@
 require 'rails_helper'
 
-feature 'main page' do
+feature 'tunes on the blog' do
 
-	scenario 'seee some text', :js => true do
-		visit('/')
-		expect(page).to have_content("HALLO")
+	context 'no tunes have been added yet' do
+		scenario 'should display a message saying there are no tunes yet', :js => true do
+			visit('/')
+			expect(page).to have_content("No tunes have been added yet")
+		end
+	end
+
+	context 'tunes have been added' do
+		scenario 'should see the title of the tune', :js => true do
+			visit('/')
+			expect(page).to have_content("Who Knows")
+			expect(page).not_to have_content("No tunes have been added yet")
+		end
 	end
 
 end

@@ -1,3 +1,8 @@
 <div ng-controller="MainCtrl as ctrl">
-	<h1 class="text-center">{{ ctrl.title }}</h1>
+	<h1 ng-show="{{!ctrl.data}}">{{ ctrl.noData }}</h1>
+	<ul ng-show="{{ctrl.data}}" ng-repeat="tune in ctrl.data">
+		<li>{{tune.artist}}</li>
+		<li>{{tune.title}}</li>
+		<li>{{tune.link}}</li>
+	</ul>
 </div>
