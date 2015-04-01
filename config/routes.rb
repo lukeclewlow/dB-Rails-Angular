@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
  
+  root to: 'tunes#index'
+ 
   get 'tunes/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

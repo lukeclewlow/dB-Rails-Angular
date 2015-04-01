@@ -47,6 +47,10 @@ group :development, :test do
  group :test do
   gem 'rspec-rails'
   gem 'capybara'
+  gem "jasmine", github: "pivotal/jasmine-gem"
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
+  gem 'launchy'
 end
 end
 
