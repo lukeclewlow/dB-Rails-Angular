@@ -12,7 +12,7 @@ feature 'tunes on the blog' do
 	context 'tunes have been added' do
 
 		before do
-			Tune.create(artist: 'Man', title: 'Who Knows')
+			Tune.create(artist: 'Man', title: 'Who Knows', link: 'https://www.youtube.com/embed/M1I5Vl93eZs')
 		end
 
 		scenario 'should see the title of the tune', :js => true do
@@ -20,6 +20,18 @@ feature 'tunes on the blog' do
 			expect(page).to have_content("Who Knows")
 			expect(page).not_to have_content("Nothing here yet")
 		end
+
+		scenario 'should see the artist of the tune', :js => true do
+			visit('/')
+			expect(page).to have_content("Man")
+		end
+
+		scenario 'an embedded video should appear', :js => true do
+			visit('/')
+			expect(page).to have_css('iframe.video')
+		end
+
+
 	end
 
 end
