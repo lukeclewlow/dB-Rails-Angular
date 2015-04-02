@@ -12,7 +12,7 @@ feature 'tunes on the blog' do
 	context 'tunes have been added' do
 
 		before do
-			Tune.create(artist: 'Man', title: 'Who Knows', link: 'https://www.youtube.com/embed/M1I5Vl93eZs')
+			Tune.create(artist: 'Chronixx', title: 'Who Knows', link: 'https://www.youtube.com/embed/hzqFmXZ8tOE')
 		end
 
 		scenario 'should see the title of the tune', :js => true do
@@ -23,15 +23,33 @@ feature 'tunes on the blog' do
 
 		scenario 'should see the artist of the tune', :js => true do
 			visit('/')
-			expect(page).to have_content("Man")
+			expect(page).to have_content("Chronixx")
 		end
 
 		scenario 'an embedded video should appear', :js => true do
 			visit('/')
 			expect(page).to have_css('iframe.video')
 		end
+	end
 
+	context 'filtering by genre' do
+	
+		before do		
+			Genre.create(name: 'Reggae')
+			Genre.create(name: 'Techno')
+		end
 
+		scenario 'there is a drop-down menu' do
+			visit('/')
+			expect(page).to have_css('ul.dropdown-menu')
+		end
+
+		scenario 'it contains all genres', :js => true do
+			visit('/')
+			click_link('Genres')
+			expect(page).to have_content('Reggae')
+			expect(page).to have_content('Techno')
+		end
 	end
 
 end
