@@ -37,6 +37,8 @@ feature 'tunes on the blog' do
 		before do		
 			Genre.create(name: 'Reggae')
 			Genre.create(name: 'Techno')
+			Tune.create(artist: 'Chronixx', title: 'Who Knows', link: 'https://www.youtube.com/embed/hzqFmXZ8tOE')
+			Tune.create(artist: 'Djrum', title: 'The Miracle pt. 1 and 2', link: 'https://www.youtube.com/embed/M1I5Vl93eZs')
 		end
 
 		scenario 'there is a drop-down menu' do
@@ -50,6 +52,12 @@ feature 'tunes on the blog' do
 			expect(page).to have_content('Reggae')
 			expect(page).to have_content('Techno')
 		end
-	end
 
+		scenario 'when you click on a genre the list is filtered', :js => true do
+			visit('/')
+			click_link('Genres')
+			click_link('Techno')
+			expect(page).not_to have_content('Chronixx')
+		end
+	end
 end
