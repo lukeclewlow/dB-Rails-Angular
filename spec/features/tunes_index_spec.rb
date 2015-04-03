@@ -35,10 +35,10 @@ feature 'tunes on the blog' do
 	context 'filtering by genre' do
 	
 		before do		
-			Genre.create(name: 'Reggae')
-			Genre.create(name: 'Techno')
-			Tune.create(artist: 'Chronixx', title: 'Who Knows', link: 'https://www.youtube.com/embed/hzqFmXZ8tOE')
-			Tune.create(artist: 'Djrum', title: 'The Miracle pt. 1 and 2', link: 'https://www.youtube.com/embed/M1I5Vl93eZs')
+			Genre.create(id: 1, name: 'Reggae')
+			Genre.create(id: 2, name: 'Techno')
+			Tune.create(artist: 'Chronixx', title: 'Who Knows', link: 'https://www.youtube.com/embed/hzqFmXZ8tOE', genre_id: 1)
+			Tune.create(artist: 'Djrum', title: 'The Miracle pt. 1 and 2', link: 'https://www.youtube.com/embed/M1I5Vl93eZs', genre_id: 2)
 		end
 
 		scenario 'there is a drop-down menu' do
