@@ -26,7 +26,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
 gem 'responders'
 gem 'non-stupid-digest-assets'
-gem 'angular-rails-templates'
 gem 'turbolinks'
 
 # Use ActiveModel has_secure_password
