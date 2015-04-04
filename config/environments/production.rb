@@ -25,10 +25,7 @@ Rails.application.configure do
   config.serve_static_files = ENV['RAILS_SERVE_STATIC_FILES'].present?
 
   # Compress JavaScripts and CSS.
-  config.assets.compile = false
-  config.assets.precompile =  ['*.js', '*.css']
-  config.assets.js_compressor = Uglifier.new(:mangle => false)
-  config.assets.js_compressor = :uglifier
+  config.assets.js_compressor = Sprockets::LazyCompressor.new { Uglifier.new(:mangle => false) }
   # config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
