@@ -1,4 +1,6 @@
-dbApp.controller('LayoutCtrl', ['$http', function($http) {
+var layoutController = angular.module('layoutController', [])
+
+layoutController.controller('LayoutCtrl', ['$http', function($http) {
   var self = this;
   self.genres = [];
 

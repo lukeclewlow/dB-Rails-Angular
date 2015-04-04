@@ -16,5 +16,14 @@
 
 .main-body {
 	position: relative;
-	top: 2em;
+	top: 6em;
 }
+
+.block {
+	display: block;
+}
+
+.tune-container {
+	margin-bottom: 10em;
+}
+

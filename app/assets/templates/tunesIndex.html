@@ -1,8 +1,21 @@
-<div>
-	<h1 ng-show="tunes.length == 0">Nothing here yet</h1>
-	<section ng-show="tunes" ng-repeat="tune in tunes">
-		{{tune.artist}}
-		{{tune.title}}
-		<iframe class="video" width="560" height="315" ng-src="{{tune.link}}" frameborder="0" allowfullscreen></iframe>
-	</section>
-</div>
+<container class="main-body">
+	<row ng-show="tunes" ng-repeat="tune in tunes" class="row">
+		<container class="container tune-container">
+			<leftcol class="col-md-3"></leftcol>
+
+			<midcol class="center-text block">
+				<section class="tune">
+					<h1 ng-show="tunes.length == 0">Nothing here yet</h1>
+					<info class="block">
+						<artist>{{tune.artist}} - </artist>
+						<tracktitle>{{tune.title}}</tracktitle>
+					</info>
+					<iframe class="video embed-reponsive-item" width="560" height="315" ng-src="{{tune.link}}" allowfullscreen></iframe>
+					<blog class="center-text block">{{tune.blog}}</blog>
+				</section>
+			</midcol>
+
+			<rightcol class="col-md-3"></rightcol>
+		</container>
+	</row>
+</container>

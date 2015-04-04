@@ -1,4 +1,4 @@
-var dbApp = angular.module('dbApp', ['ngRoute', 'tunesControllers'])
+var dbApp = angular.module('dbApp', ['ngRoute', 'tunesControllers', 'layoutController'])
 
 dbApp.config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
@@ -10,7 +10,7 @@ dbApp.config(function($sceDelegateProvider) {
 dbApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 		.when('/:genre', {
-			templateUrl: "../assets/tunesByGenre.html",
+			templateUrl: "../assets/tunesIndex.html",
 			controller: 'GenreCtrl'
 		})
 		.otherwise({
