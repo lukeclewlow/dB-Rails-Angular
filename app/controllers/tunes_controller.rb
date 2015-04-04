@@ -9,5 +9,4 @@ class TunesController < ApplicationController
   	@tunes = Tune.all
 		respond_with @tunes.to_json
   end
-  
 end

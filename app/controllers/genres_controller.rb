@@ -8,4 +8,9 @@ class GenresController < ApplicationController
   	@genres = Genre.all
 		respond_with @genres.to_json
   end
+
+  def show
+  	@tunes = Tune.where(:genre_id=>params[:id])
+  	respond_with @tunes.to_json
+  end
 end

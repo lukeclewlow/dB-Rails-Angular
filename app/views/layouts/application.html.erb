@@ -12,10 +12,10 @@
 			<ul class="nav nav-pills ">
 				<h1 class="logo">d(-_-)b</h1>
 		    <li class="dropdown pull-right">
-		        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Genres<b class="caret"></b></a>
+		        <button data-toggle="dropdown" class="dropdown-toggle">Genres<b class="caret"></b></button>
 		        <ul class="dropdown-menu">
 		        	<container ng-repeat="genre in layoutCtrl.genres">
-			          <li><a href="#/{{genre.name}}">{{genre.name}}</a></li>
+			          <li><a href="#/{{genre.id}}">{{genre.name}}</a></li>
 			        </container>
 		        </ul>
 		    </li>

@@ -48,14 +48,14 @@ feature 'tunes on the blog' do
 
 		scenario 'it contains all genres', :js => true do
 			visit('/')
-			click_link('Genres')
+			click_button('Genres')
 			expect(page).to have_content('Reggae')
 			expect(page).to have_content('Techno')
 		end
 
 		scenario 'when you click on a genre the list is filtered', :js => true do
 			visit('/')
-			click_link('Genres')
+			click_button('Genres')
 			click_link('Techno')
 			expect(page).not_to have_content('Chronixx')
 		end

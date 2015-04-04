@@ -7,4 +7,14 @@
 
 .header-center {
 	text-align: center;
+	padding-left: 6em;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.main-body {
+	position: relative;
+	top: 2em;
 }
