@@ -1,24 +1,3 @@
-<container ng-controller="MainCtrl as ctrl">
-	<nav class="navbar navbar-default navbar-custom navbar-fixed-top header-center">		
-		<ul class="nav nav-pills ">
-			<h1 class="logo">d(-_-)b</h1>
-	    <li class="dropdown pull-right">
-	        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Genres<b class="caret"></b></a>
-	        <ul class="dropdown-menu">
-	        	<container ng-repeat="genre in ctrl.genres">
-		          <li><a href="#">{{genre.name}}</a></li>
-		        </container>
-	        </ul>
-	    </li>
-		</ul>
-	</nav>
+<container ng-view>
 
-	<div>
-		<h1 ng-show="ctrl.tunes.length == 0">Nothing here yet</h1>
-		<section ng-show="ctrl.tunes" ng-repeat="tune in ctrl.tunes">
-			{{tune.artist}}
-			{{tune.title}}
-			<iframe class="video" width="560" height="315" ng-src="{{tune.link}}" frameborder="0" allowfullscreen></iframe>
-		</section>
-	</div>
 </container>

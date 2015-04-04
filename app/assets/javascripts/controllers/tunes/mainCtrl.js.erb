@@ -1,0 +1,48 @@
+var dbApp = angular.module('dbApp', ['ngRoute'])
+
+dbApp.config(function($sceDelegateProvider) {
+  $sceDelegateProvider.resourceUrlWhitelist([
+    'self',
+    'https://www.youtube.com/embed/**'
+  ]);
+});
+
+dbApp.config(['$routeProvider', function($routeProvider) {
+	$routeProvider
+		.when('/genre', {
+			templateUrl: "../assets/tunesByGenre.html.erb",
+			controller: 'GenreCtrl'
+		})
+		.otherwise({
+			templateUrl: "../assets/tunesIndex.html",
+			controller: 'MainCtrl'
+		});
+}]);
+
+dbApp.controller('LayoutCtrl', ['$http', function($http) {
+  var self = this;
+  self.genres = [];
+
+  $http.get('all_genres.json').
+    then(function(response) {
+      self.genres = response.data;
+    }, 
+    	function(errResponse) {
+      console.error('Error whilst fetching links');
+  	}
+  );
+}]);
+
+dbApp.controller('MainCtrl', ['$http', '$scope', function($http, $scope) {
+  var self = $scope;
+  self.tunes = [];
+  
+  $http.get('all_tunes.json').
+    then(function(response) {
+      self.tunes = response.data;
+    }, 
+    	function(errResponse) {
+      console.error('Error whilst fetching links');
+  	}
+  );
+}]);

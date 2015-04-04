@@ -7,8 +7,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<container ng-controller="LayoutCtrl as layoutCtrl"> 
+		<nav class="navbar navbar-default navbar-custom navbar-fixed-top header-center">		
+			<ul class="nav nav-pills ">
+				<h1 class="logo">d(-_-)b</h1>
+		    <li class="dropdown pull-right">
+		        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Genres<b class="caret"></b></a>
+		        <ul class="dropdown-menu">
+		        	<container ng-repeat="genre in layoutCtrl.genres">
+			          <li><a href="#/{{genre.name}}">{{genre.name}}</a></li>
+			        </container>
+		        </ul>
+		    </li>
+			</ul>
+		</nav>
+	</container>
 
 <%= yield %>
 
+</container>
 </body>
 </html>
