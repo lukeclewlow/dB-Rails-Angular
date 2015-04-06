@@ -8,13 +8,13 @@ dbApp.config(function($sceDelegateProvider) {
 });
 
 dbApp.config(['$routeProvider', function($routeProvider) {
-	$routeProvider
-		.when('/:genre', {
-			templateUrl: "../assets/tunesIndex.html",
-			controller: 'GenreCtrl'
-		})
-		.otherwise({
-			templateUrl: "../assets/tunesIndex.html",
-			controller: 'IndexCtrl'
-		});
+  $routeProvider
+    .when('/:genre', {
+      templateUrl: "../assets/tunesIndex.html",
+      controller: 'GenreCtrl'
+    })
+    .otherwise({
+      templateUrl: "../assets/tunesIndex.html",
+      controller: 'IndexCtrl'
+    });
 }]);

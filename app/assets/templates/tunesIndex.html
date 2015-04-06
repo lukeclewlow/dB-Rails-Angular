@@ -1,47 +1,47 @@
 <container class="main-body">
-	<h1 ng-show="tunes.length == 0">Nothing here yet</h1>
-	<row ng-show="tunes" ng-repeat="tune in tunes" class="row">
-		<container class="container tune-container">
-			<leftcol class="col-md-3"></leftcol>
+  <h1 ng-show="tunes.length == 0">Nothing here yet</h1>
+  <row ng-show="tunes" ng-repeat="tune in tunes" class="row">
+    <container class="container tune-container">
+      <leftcol class="col-md-3"></leftcol>
 
-			<midcol class="center-text block">
-				<section class="tune">
-					<info class="block">
-						<artist>{{tune.artist}} - </artist>
-						<tracktitle>{{tune.title}}</tracktitle>
-					</info>
-					<iframe class="video embed-reponsive-item" width="560" height="315" ng-src="{{tune.link}}" allowfullscreen></iframe>
-					<blog class="center-text block">{{tune.blog}}</blog>
-				</section>
-			</midcol>
+      <midcol class="center-text block">
+        <section class="tune">
+          <info class="block">
+            <artist>{{tune.artist}} - </artist>
+            <tracktitle>{{tune.title}}</tracktitle>
+          </info>
+          <iframe class="video embed-reponsive-item" width="560" height="315" ng-src="{{tune.link}}" allowfullscreen></iframe>
+          <blog class="center-text block">{{tune.blog}}</blog>
+        </section>
+      </midcol>
 
-			<rightcol class="col-md-3"></rightcol>
-		</container>
-	</row>
+      <rightcol class="col-md-3"></rightcol>
+    </container>
+  </row>
 
-	<section>
-		<form name="addForm"
-					class="form" 
-	 			  ng-submit="ctrl.add()">
-		<input type="text"
-					 placeholder="Artist?"
-					 ng-model="ctrl.tune.artist"
-					 required>
-		<input type="text"
-					 placeholder="Title?"
-					 ng-model="ctrl.tune.title"
-					 required>
-		<input type="text"
-					 placeholder="Blog?"
-					 ng-model="ctrl.tune.blog"
-					 required>
-		<input type="text"
-					 placeholder="Link?"
-					 ng-model="ctrl.tune.link"
-					 required>
-		<input type="submit"
-					 value="Add">
-		</form>
- 	</section>
+  <section>
+    <form name="addForm"
+          class="form" 
+          ng-submit="ctrl.add()">
+    <input type="text"
+           placeholder="Artist?"
+           ng-model="ctrl.tune.artist"
+           required>
+    <input type="text"
+           placeholder="Title?"
+           ng-model="ctrl.tune.title"
+           required>
+    <input type="text"
+           placeholder="Blog?"
+           ng-model="ctrl.tune.blog"
+           required>
+    <input type="text"
+           placeholder="Link?"
+           ng-model="ctrl.tune.link"
+           required>
+    <input type="submit"
+           value="Add">
+    </form>
+  </section>
 
 </container>
