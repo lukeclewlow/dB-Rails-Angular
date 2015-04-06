@@ -18,4 +18,30 @@
 			<rightcol class="col-md-3"></rightcol>
 		</container>
 	</row>
+
+	<section>
+		<form name="addForm"
+					class="form" 
+	 			  ng-submit="ctrl.add()">
+		<input type="text"
+					 placeholder="Artist?"
+					 ng-model="ctrl.tune.artist"
+					 required>
+		<input type="text"
+					 placeholder="Title?"
+					 ng-model="ctrl.tune.title"
+					 required>
+		<input type="text"
+					 placeholder="Blog?"
+					 ng-model="ctrl.tune.blog"
+					 required>
+		<input type="text"
+					 placeholder="Link?"
+					 ng-model="ctrl.tune.link"
+					 required>
+		<input type="submit"
+					 value="Add">
+		</form>
+ 	</section>
+
 </container>
