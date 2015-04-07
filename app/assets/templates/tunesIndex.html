@@ -7,8 +7,8 @@
       <midcol class="center-text block">
         <section class="tune">
           <info class="block">
-            <artist>{{tune.artist}} - </artist>
-            <tracktitle>{{tune.title}}</tracktitle>
+            <track ng-bind="tune.artist + ' - ' + tune.title">
+            </track> 
           </info>
           <iframe class="video embed-reponsive-item" width="560" height="315" ng-src="{{tune.link}}" allowfullscreen></iframe>
           <blog class="center-text block">{{tune.blog}}</blog>
