@@ -4,14 +4,14 @@
     <container class="container tune-container">
       <leftcol class="col-md-3"></leftcol>
 
-      <midcol class="center-text block">
+      <midcol class="center-text block col-md-6">
         <section class="tune">
           <info class="block">
             <track ng-bind="tune.artist + ' - ' + tune.title">
             </track> 
           </info>
           <iframe class="video embed-reponsive-item" width="560" height="315" ng-src="{{tune.link}}" allowfullscreen></iframe>
-          <blog class="center-text block">{{tune.blog}}</blog>
+          <blog ng-bind="tune.blog" class="center-text block blog"></blog>
         </section>
       </midcol>
 

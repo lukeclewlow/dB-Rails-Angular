@@ -25,12 +25,7 @@ body {
   letter-spacing: -0.02em;
   font-weight: 400;
   font-style: normal;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-h1 {
-	color: orange;
 }
 
 iframe {
@@ -43,7 +38,7 @@ info {
   text-align: center !important;
   line-height: 1.2 !important;
   position: absolute;
-  margin-bottom: 2em;
+  margin-bottom: 3.75em;
 }
 
 info:before {
@@ -57,7 +52,7 @@ info:before {
 
 track {
 	display: inline-block !important;
-  border: 1px solid rgba(0,0,0,0.44) !important;
+  border: 1px solid rgba(255,133,0,0.44) !important;
   background: #fff !important;
   text-transform: uppercase !important;
   font-size: 12px !important;
@@ -68,18 +63,26 @@ track {
   text-align: center !important;
 }
 
+blog {
+	text-align: left !important;
+	padding-left: 10%;
+	padding-right: 10%;
+	padding-top: 5%;
+}
+
 .header-center {
-	border-bottom: solid orange 1px !important;
+	border-bottom: 1px solid rgba(0,0,0,0.4) !important;
 }
 
 a:link, a:visited, a:active {
-  color: black;
+  color: rgba(100,50,0,0.3);
   text-decoration: none;
+  transition: color 0.75s;
 }
 
 /* mouse over link */
 a:hover {
-  color: orange !important;
+  color: rgba(255,133,0,1) !important;
   text-decoration: none !important;
 }
 
@@ -114,6 +117,10 @@ a:hover {
 
 .tune {
 	font-size: 24px;
+}
+
+.blog {
+	font-size: 14px;
 }
 
 
