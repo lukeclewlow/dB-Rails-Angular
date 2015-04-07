@@ -1,3 +1,39 @@
+html {
+	background-color: white;
+	color: black;
+	font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+h1 {
+	color: orange;
+}
+
+iframe {
+	border: solid orange 1px;
+}
+
+.header-center {
+	border-bottom: solid orange 1px !important;
+}
+
+a:link, a:visited, a:active {
+    color: black;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: orange !important;
+    text-decoration: none !important;
+}
+
 .logo {
 	display: inline;
 	margin-top: 1em;
@@ -26,4 +62,29 @@
 .tune-container {
 	margin-bottom: 10em;
 }
+
+
+/* -----------------------RESPONSIVE DESIGN CHOICES -------------- /*
+
+/* Large desktop */
+@media (min-width: 1200px) {
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+
+}
+ 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+}
+
+
 

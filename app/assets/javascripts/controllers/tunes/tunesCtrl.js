@@ -14,6 +14,18 @@ tunesControllers.controller('IndexCtrl', ['$http', '$scope', function($http, $sc
   );
 }]);
 
+tunesControllers.controller('AddTuneCtrl', ['$http', '$scope', function($http, $scope) {
+  var self = $scope;
+
+  this.add = function() {
+    $http.post('/tunes', self.tune)
+      .then(console.log("IMHERE"))
+      .then(function(response) {
+        self.tune = {};
+      });
+  };
+}])
+
 tunesControllers.controller('GenreCtrl', ['$http', '$scope', '$routeParams', function($http, $scope, $routeParams) {
   var self = $scope;
   self.tunes = [];

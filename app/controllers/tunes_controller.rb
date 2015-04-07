@@ -9,4 +9,13 @@ class TunesController < ApplicationController
   	@tunes = Tune.all
 		respond_with @tunes.to_json
   end
+
+  def create
+  	@tune = Tune.create(tune_params)
+		render json: @tune, status: 201
+  end
+
+  def tune_params
+    params.require(:tune).permit(:artist, :title, :blog, :link)
+  end
 end
