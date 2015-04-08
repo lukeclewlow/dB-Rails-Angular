@@ -19,29 +19,36 @@
     </container>
   </row>
 
-  <section>
-    <form name="addForm"
-          class="form" 
-          ng-submit="add()">
+  <section ng-controller="AddTunesCtrl as ctrl">
+    <form name="tune"
+          class="form">
     <input type="text"
            placeholder="Artist?"
-           ng-model="tune.artist"
+           id="artist"
+           ng-model="ctrl.tune.artist"
            required>
     <input type="text"
            placeholder="Title?"
-           ng-model="tune.title"
+           id="title"
+           ng-model="ctrl.tune.title"
            required>
     <input type="text"
            placeholder="Blog?"
-           ng-model="tune.blog"
+           id="blog"
+           ng-model="ctrl.tune.blog"
            required>
     <input type="text"
            placeholder="Link?"
-           ng-model="tune.link"
+           id="link"
+           ng-model="ctrl.tune.link"
            required>
     <input type="submit"
-           value="Add">
+           id="submit_btn"
+           value="Add"
+           ng-click="ctrl.add(tune)">
     </form>
+
+    {{ctrl.tune.artist}}
   </section>
 
 </container>
