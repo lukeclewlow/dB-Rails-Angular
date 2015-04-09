@@ -4,7 +4,7 @@ tunesControllers.controller('IndexCtrl', ['$http', '$scope', function($http, $sc
   var self = $scope;
   self.tunes = [];
   
-  $http.get('all_tunes.json').
+  self.getTunes = $http.get('all_tunes.json').
     then(function(response) {
       self.tunes = response.data;
     }, 
@@ -18,7 +18,7 @@ tunesControllers.controller('AddTunesCtrl', ['$http', '$scope', function($http, 
   var self = $scope;
 
   this.add = function() {
-    
+
     var dataObject = {
           artist: self.tune.artist
           ,title: self.tune.title

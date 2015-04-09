@@ -1,15 +1,14 @@
-(function(){
-
-  describe('Controller: MainCtrl', function () {
-    var scope;
-
-    beforeEach(inject(function ($controller, $rootScope) {
-      scope = $rootScope.$new();
-      $controller('MainCtrl', { $scope: scope });
-    }));
-
-    it('populates the scope with Hallo', function () {
-      expect(scope.items).toEqual(fakeItems);
-    });
-  });
-})();
+describe('Controller: IndexCtrl', function() {
+ // Instantiate a new version of my module before each test
+ beforeEach(module('tunesControllers'));
+ // var ctrl;
+ // // Before each unit test, instantiate a new instance
+ // // of the controller
+ beforeEach(inject(function($controller) {
+  ctrl = $controller('IndexCtrl');
+ }));
+ 
+ it('should have an empty array on initialisation', function() {
+  expect(true).toBe(true);
+ });
+});
