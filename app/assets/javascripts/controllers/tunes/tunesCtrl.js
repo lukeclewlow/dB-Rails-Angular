@@ -12,6 +12,10 @@ tunesControllers.controller('IndexCtrl', ['$http', '$scope', function($http, $sc
       console.error('Error whilst fetching links');
   	}
   );
+
+  var firstTune = self.tunes.shift();
+  var otherTunes = self.tunes;
+
 }]);
 
 tunesControllers.controller('AddTunesCtrl', ['$http', '$scope', function($http, $scope) {
