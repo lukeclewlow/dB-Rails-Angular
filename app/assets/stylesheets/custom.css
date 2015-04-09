@@ -1,5 +1,4 @@
 html {
-	background-color: #f2f2f2;
 	color: black;
 	font-family: sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
@@ -21,6 +20,7 @@ html {
 }
 
 body {
+	background-color: #f2f2f2 !important;
 	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
   letter-spacing: -0.02em;
   font-weight: 400;
@@ -81,7 +81,7 @@ info:before {
 track {
 	display: inline-block !important;
   border: 1px solid rgba(255,133,0,0.44) !important;
-  background: #fff !important;
+  background: #fff!important;
   text-transform: uppercase !important;
   font-size: 12px !important;
   padding: 3px 8px 2px 12px !important;
