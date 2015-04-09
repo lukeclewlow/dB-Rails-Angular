@@ -28,6 +28,32 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+nav {
+	padding-top: 1em;
+	padding-bottom: 2em;
+	background-color: #333 !important;
+}
+
+button {
+	border: none;
+	color: rgba(255,133,0,0.5) !important;
+	background-color: #333 !important;
+	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  padding-top: 1.10em;
+  padding-right: 1em; 
+  transition: color 0.75s;
+}
+
+button:hover {
+	color: rgba(255,133,0,1) !important;
+}
+
+ul {
+	background-color: #333 !important;
+}
+
 iframe {
 	border: solid orange 1px;
 }
@@ -38,7 +64,7 @@ info {
   text-align: center !important;
   line-height: 1.2 !important;
   position: absolute;
-  margin-bottom: 3.75em;
+  margin-bottom: 3em;
 }
 
 info:before {
@@ -74,7 +100,7 @@ blog {
 }
 
 a:link, a:visited, a:active {
-  color: rgba(100,50,0,0.3);
+  color: rgba(255,133,0,0.5);
   text-decoration: none;
   transition: color 0.75s;
 }
@@ -103,7 +129,7 @@ a:hover {
 
 .main-body {
 	position: relative;
-	top: 6em;
+	top: 7em;
 }
 
 .block {
@@ -120,6 +146,10 @@ a:hover {
 
 .blog {
 	font-size: 14px;
+}
+
+.border {
+	border-color: black;
 }
 
 
