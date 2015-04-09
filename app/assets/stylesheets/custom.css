@@ -168,6 +168,14 @@ a:hover {
 		height: 315px;
 	}
 }
+
+@media (min-width: 980px) and (max-width: 1199px) {
+	iframe {
+		width: 560px;
+		height: 315px;
+	}
+}
+
  
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
@@ -179,7 +187,10 @@ a:hover {
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
-
+	iframe {
+		width: 373px;
+		height: 210px;
+	}
 }
  
 /* Landscape phones and down */
