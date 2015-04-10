@@ -3,6 +3,8 @@ var tunesControllers = angular.module('tunesControllers', [])
 tunesControllers.controller('IndexCtrl', ['$http', '$scope', function($http, $scope) {
   var self = $scope;
   self.tunes = [];
+  self.mostRecentTune = [];
+  self.otherTunes = [];
   
   self.getTunes = $http.get('all_tunes.json').
     then(function(response) {
@@ -11,10 +13,10 @@ tunesControllers.controller('IndexCtrl', ['$http', '$scope', function($http, $sc
     	function(errResponse) {
       console.error('Error whilst fetching links');
   	}
-  );
-
-  var firstTune = self.tunes.shift();
-  var otherTunes = self.tunes;
+  ).then(function(){
+    self.mostRecentTune = self.tunes.shift();
+    self.otherTunes = self.tunes;
+  });
 
 }]);
 

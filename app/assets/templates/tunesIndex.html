@@ -1,23 +1,41 @@
 <container class="main-body">
   <h1 ng-show="tunes.length == 0">Nothing here yet</h1>
-  <row ng-show="tunes" ng-repeat="tune in tunes" class="row border">
+  <row ng-show="tunes" class="row border">
     <container class="container tune-container">
       <leftcol class="col-md-3"></leftcol>
 
       <midcol class="center-text block col-md-6">
         <section class="tune">
           <info class="block">
-            <track ng-bind="tune.artist + ' - ' + tune.title">
+            <track ng-bind="mostRecentTune.artist + ' - ' + mostRecentTune.title">
             </track> 
           </info>
-          <iframe class="video embed-reponsive-item" ng-src="{{tune.link}}" allowfullscreen></iframe>
-          <blog ng-bind="tune.blog" class="center-text block blog"></blog>
+          <iframe class="video embed-reponsive-item larger-video" ng-src="{{mostRecentTune.link}}" allowfullscreen></iframe>
+          <blog ng-bind="mostRecentTune.blog" class="center-text block blog"></blog>
         </section>
       </midcol>
-
+ 
       <rightcol class="col-md-3"></rightcol>
     </container>
   </row>
+
+  <row ng-show"tunes" class="row border">
+    <container ng-repeat"tune in otherTunes" class="container tune-container">
+      <leftcol class="col-md-4">
+          
+      </leftcol>
+
+      <midcol class="col-md-4">
+        
+      </midcol>
+
+      <rightcol class="col-md-4">
+        
+      </rightcol>
+
+    </container>
+  </row>
+
 
   <section ng-controller="AddTunesCtrl as ctrl">
     <form name="tune"
