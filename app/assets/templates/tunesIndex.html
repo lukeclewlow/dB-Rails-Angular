@@ -7,11 +7,10 @@
       <midcol class="center-text block col-md-6">
         <section class="tune">
           <info class="block">
-            <track ng-bind="mostRecentTune.artist + ' - ' + mostRecentTune.title">
-            </track> 
+            <track ng-bind="mostRecentTune.artist + ' - ' + mostRecentTune.title"></track>
           </info>
-          <iframe class="video embed-reponsive-item larger-video" ng-src="{{mostRecentTune.link}}" allowfullscreen></iframe>
-          <blog ng-bind="mostRecentTune.blog" class="center-text block blog"></blog>
+          <iframe class="larger-video" ng-src="{{mostRecentTune.link}}" allowfullscreen></iframe>
+          <blog ng-bind="mostRecentTune.blog" class="center-text block main-blog"></blog>
         </section>
       </midcol>
  
@@ -20,19 +19,10 @@
   </row>
 
   <row ng-show"tunes" class="row border">
-    <container ng-repeat"tune in otherTunes" class="container tune-container">
-      <leftcol class="col-md-4">
-          
-      </leftcol>
-
-      <midcol class="col-md-4">
-        
-      </midcol>
-
-      <rightcol class="col-md-4">
-        
-      </rightcol>
-
+    <container ng-repeat="tune in tunes" class="col-md-4 center-text block">
+          <!-- <track ng-bind="tune.artist + ' - ' + tune.title">     -->
+          <iframe class="smaller-video" ng-src="{{tune.link}}" allowfullscreen></iframe>
+          <blog ng-bind="tune.blog" class="center-text block blog"></blog>
     </container>
   </row>
 

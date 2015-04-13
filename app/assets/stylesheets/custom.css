@@ -60,6 +60,15 @@ iframe {
 	height: 160px;
 }
 
+iframe.smaller-video {
+	text-align: center;
+	float: left;
+	width: 350px;
+	height: 200px;
+	margin-left: 3em;
+	margin-bottom: .5em;
+}
+
 info {
 	width: 100%;
   position: relative !important;
@@ -94,11 +103,12 @@ track {
 blog {
 	padding-left: 10%;
 	padding-right: 10%;
-	padding-top: 5%;
 }
 
 .header-center {
 	border-bottom: 1px solid rgba(255,133,0,1) !important;
+	text-align: center;
+	padding-left: 6em;
 }
 
 a:link, a:visited, a:active {
@@ -120,11 +130,6 @@ a:hover {
 	text-align: center;
 }
 
-.header-center {
-	text-align: center;
-	padding-left: 6em;
-}
-
 .center-text {
 	text-align: center;
 }
@@ -138,16 +143,19 @@ a:hover {
 	display: block;
 }
 
-.tune-container {
-	/*margin-bottom: 3em;*/
-}
-
 .tune {
 	font-size: 24px;
 }
 
-.blog {
+.main-blog {
 	font-size: 14px;
+	padding-top: 5%;
+}
+
+.blog {
+	font-size: 12px;
+	padding-top: 2%;
+	margin-bottom: 3em;
 }
 
 .border {
