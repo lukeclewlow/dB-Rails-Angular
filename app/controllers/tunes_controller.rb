@@ -6,7 +6,7 @@ class TunesController < ApplicationController
   end
 
   def all_tunes
-  	@tunes = Tune.all
+  	@tunes = Tune.last(7).reverse
 		respond_with @tunes.to_json
   end
 
