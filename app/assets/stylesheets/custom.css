@@ -144,6 +144,11 @@ a:hover {
 	top: 4em;
 }
 
+.main-body-genre {
+	position: relative;
+	top: 6em;
+}
+
 .block {
 	display: block;
 }
