@@ -69,31 +69,40 @@ iframe.smaller-video {
 	margin-bottom: .5em;
 }
 
-info {
+divider {
 	margin-left: 25%;
 	width: 50%;
   position: relative !important;
   text-align: center !important;
   line-height: 1.2 !important;
   position: absolute;
-  margin-bottom: 3em;
+  margin-bottom: 2.5em;
 }
 
-info:before {
+divider:before {
   content: "";
   display: block;
   position: absolute;
-  top: 17px;
+  top: 14px;
   width: 100%;
   border-top: 1px solid rgba(0,0,0,0.15);
 }
 
-track {
+divider.full-width {
+	width: 90%;
+	margin-left: 5%;
+}
+
+divider.full-width:before {
+	top: 10px;
+}
+
+track.title {
 	display: inline-block !important;
   border: 1px solid rgba(255,133,0,0.44) !important;
   background: #fff!important;
   text-transform: uppercase !important;
-  font-size: 12px !important;
+  font-size: 10px !important;
   padding: 3px 8px 2px 12px !important;
   letter-spacing: .3em !important;
   color: rgba(0,0,0,0.6) !important;
@@ -132,7 +141,7 @@ a:hover {
 
 .main-body {
 	position: relative;
-	top: 7em;
+	top: 4em;
 }
 
 .block {
@@ -140,11 +149,11 @@ a:hover {
 }
 
 .tune {
-	font-size: 24px;
+	font-size: 20px;
 }
 
 .main-blog {
-	font-size: 14px;
+	font-size: 12px;
 	padding-top: 2%;
 	margin-left: 25%;
 	width: 50%;
@@ -153,7 +162,7 @@ a:hover {
 }
 
 .blog {
-	font-size: 12px;
+	font-size: 10px;
 	padding-top: 2%;
 	margin-bottom: 3em;
 	padding-left: 10%;
@@ -174,15 +183,15 @@ a:hover {
 /* Large desktop */
 @media (min-width: 1200px) {
 	iframe.larger-video {
-		width: 560px;
-		height: 315px;
+		width: 504px;
+		height: 283px;
 	}
 }
 
 @media (min-width: 980px) and (max-width: 1199px) {
 	iframe.larger-video {
-		width: 560px;
-		height: 315px;
+		width: 504px;
+		height: 283px;
 	}
 }
 
@@ -190,16 +199,16 @@ a:hover {
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) {
 	iframe.larger-video {
-		width: 560px;
-		height: 315px;
+		width: 504px;
+		height: 283px;
 	}
 }
  
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
 	iframe.larger-video {
-		width: 373px;
-		height: 210px;
+		width: 504px;
+		height: 283px;
 	}
 }
  
