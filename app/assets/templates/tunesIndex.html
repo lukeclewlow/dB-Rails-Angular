@@ -2,9 +2,8 @@
   <h1 ng-show="tunes.length == 0">Nothing here yet</h1>
   <row ng-show="tunes" class="row">
     <container class="container tune-container">
-      <leftcol class="col-md-3"></leftcol>
 
-      <midcol class="center-text col-md-6">
+      <midcol class="center-text">
         <section class="tune">
           <info class="block">
             <track ng-bind="mostRecentTune.artist + ' - ' + mostRecentTune.title"></track>
@@ -13,14 +12,12 @@
           <blog ng-bind="mostRecentTune.blog" class="center-text block main-blog"></blog>
         </section>
       </midcol>
- 
-      <rightcol class="col-md-3"></rightcol>
+
     </container>
   </row>
 
   <row ng-show"tunes" class="row">
     <container ng-repeat="tune in tunes" class="col-md-4 center-text block">
-      <!-- <track ng-bind="tune.artist + ' - ' + tune.title">     -->
       <iframe class="smaller-video" ng-src="{{tune.link}}" allowfullscreen></iframe>
       <blog ng-bind="tune.blog" class="center-text block blog"></blog>
     </container>

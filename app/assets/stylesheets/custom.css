@@ -70,7 +70,8 @@ iframe.smaller-video {
 }
 
 info {
-	width: 100%;
+	margin-left: 25%;
+	width: 50%;
   position: relative !important;
   text-align: center !important;
   line-height: 1.2 !important;
@@ -98,11 +99,6 @@ track {
   color: rgba(0,0,0,0.6) !important;
   position: relative !important;
   text-align: center !important;
-}
-
-blog {
-	padding-left: 10%;
-	padding-right: 10%;
 }
 
 .header-center {
@@ -149,13 +145,19 @@ a:hover {
 
 .main-blog {
 	font-size: 14px;
-	padding-top: 5%;
+	padding-top: 2%;
+	margin-left: 25%;
+	width: 50%;
+	padding-left: 5%;
+	padding-right: 5%;
 }
 
 .blog {
 	font-size: 12px;
 	padding-top: 2%;
 	margin-bottom: 3em;
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .border {
