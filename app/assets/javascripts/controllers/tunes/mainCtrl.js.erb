@@ -17,7 +17,7 @@ dbApp.config(function($httpProvider) {
 dbApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/:genre', {
-      templateUrl: "../assets/tunesIndex.html",
+      templateUrl: "../assets/genreIndex.html",
       controller: 'GenreCtrl'
     })
     .otherwise({
