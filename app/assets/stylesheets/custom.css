@@ -143,8 +143,8 @@ iframe.smaller-video {
 }
 
 divider.full-width {
-	width: 90%;
-	margin-left: 5%;
+	width: 20%;
+	margin-left: 40%;
 }
 
 divider.full-width:before {
