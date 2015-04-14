@@ -17,3 +17,4 @@
 //= require angular
 //= require angular-route
 //= require animations
+//= require jquery.bootstrap.autohidingnavbar

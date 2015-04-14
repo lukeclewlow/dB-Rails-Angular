@@ -11,7 +11,7 @@ $(document).scroll(function(){
 });
 
 $(document).scroll(function(){
-    if($(this).scrollTop() > 100)
+    if($(this).scrollTop() > 110)
     {   
         $('.full-width').animate({
         	"width":"90%",
@@ -20,4 +20,8 @@ $(document).scroll(function(){
         	console.log("animation complete");
         });
     }
+});
+
+$(document).ready(function() {
+  $(".navbar-fixed-top").autoHidingNavbar();
 });

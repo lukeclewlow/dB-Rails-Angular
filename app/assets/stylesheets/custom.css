@@ -34,7 +34,7 @@ a:hover {
 
 .main-body {
 	position: relative;
-	top: 4em;
+	top: 2em;
 }
 
 .main-body-genre {
@@ -45,8 +45,7 @@ a:hover {
 /* ------ NAV BAR STYLING ------ */
 
 nav {
-	padding-top: 1em;
-	padding-bottom: 2em;
+	height: 8%;
 	background-color: #333 !important;
 	opacity: 0.9;
 }
@@ -79,8 +78,6 @@ ul {
 
 .logo {
 	display: inline;
-	margin-top: 1em;
-	padding-top: 4em;
 	text-align: center;
 }
 
