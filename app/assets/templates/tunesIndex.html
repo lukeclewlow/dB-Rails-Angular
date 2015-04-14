@@ -3,13 +3,13 @@
   <row ng-show="tunes" class="row">
     <container class="container tune-container">
 
-      <midcol class="center-text">
+      <midcol>
         <section class="tune">
           <divider class="block">
             <track class="title" ng-bind="mostRecentTune.artist + ' - ' + mostRecentTune.title"></track>
           </divider>
           <iframe class="larger-video" ng-src="{{mostRecentTune.link}}" allowfullscreen></iframe>
-          <blog ng-bind="mostRecentTune.blog" class="center-text block main-blog"></blog>
+          <blog ng-bind="mostRecentTune.blog" class="block main-blog"></blog>
         </section>
       </midcol>
 
@@ -22,7 +22,7 @@
 
 
   <row ng-show"tunes" class="row">
-    <container ng-repeat="tune in tunes" class="col-lg-4 col-md-12 col-sm-12 col-xs-12 center-text block">
+    <container ng-repeat="tune in tunes" class="col-lg-4 col-md-12 col-sm-12 col-xs-12 block">
       <iframe class="smaller-video" ng-src="{{tune.link}}" allowfullscreen></iframe>
       <blog ng-bind="tune.blog" class="center-text block blog"></blog>
     </container>

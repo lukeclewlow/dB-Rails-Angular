@@ -1,8 +1,6 @@
+/* ------ GENERAL STYLING ------ */
+
 html {
-	color: black;
-	font-family: sans-serif; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
   box-sizing: border-box;
   letter-spacing: -0.02em;
   font-weight: 400;
@@ -21,12 +19,30 @@ html {
 
 body {
 	background-color: #f2f2f2 !important;
-	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
-  letter-spacing: -0.02em;
-  font-weight: 400;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
 }
+
+a:link, a:visited, a:active {
+  color: rgba(255,133,0,0.5);
+  text-decoration: none;
+  transition: color 0.75s;
+}
+
+a:hover {
+  color: rgba(255,133,0,1) !important;
+  text-decoration: none !important;
+}
+
+.main-body {
+	position: relative;
+	top: 4em;
+}
+
+.main-body-genre {
+	position: relative;
+	top: 6em;
+}
+
+/* ------ NAV BAR STYLING ------ */
 
 nav {
 	padding-top: 1em;
@@ -37,7 +53,7 @@ nav {
 button {
 	border: none;
 	color: rgba(255,133,0,0.5) !important;
-	background-color: #333 !important;
+	background-color: inherit;
 	font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
   letter-spacing: -0.02em;
   font-weight: 400;
@@ -54,19 +70,36 @@ ul {
 	background-color: #333 !important;
 }
 
-iframe {
-	border: solid orange 1px;
-	width: 280px;
-	height: 160px;
+.header-center {
+	border-bottom: 1px solid rgba(255,133,0,1) !important;
+	text-align: center;
+	padding-left: 6em;
 }
 
-iframe.smaller-video {
+.logo {
+	display: inline;
+	margin-top: 1em;
+	padding-top: 4em;
 	text-align: center;
-	float: left;
-	width: 350px;
-	height: 200px;
-	margin-left: 1.25em;
-	margin-bottom: .5em;
+}
+
+/* <------ MAIN PAGE ------> */
+
+midcol {
+	text-align: center;
+}
+
+track.title {
+	display: inline-block !important;
+  border: 1px solid rgba(255,133,0,0.44) !important;
+  background: #fff!important;
+  text-transform: uppercase !important;
+  font-size: 10px !important;
+  padding: 3px 8px 2px 12px !important;
+  letter-spacing: .3em !important;
+  color: rgba(0,0,0,0.6) !important;
+  position: relative !important;
+  text-align: center !important;
 }
 
 divider {
@@ -88,6 +121,26 @@ divider:before {
   border-top: 1px solid rgba(0,0,0,0.15);
 }
 
+iframe {
+	text-align: center;
+	border: solid orange 1px;
+	width: 280px;
+	height: 160px;
+}
+
+blog {
+	text-align: center;
+}
+
+iframe.smaller-video {
+	text-align: center;
+	float: left;
+	width: 350px;
+	height: 200px;
+	margin-left: 1.25em;
+	margin-bottom: .5em;
+}
+
 divider.full-width {
 	width: 90%;
 	margin-left: 5%;
@@ -95,58 +148,6 @@ divider.full-width {
 
 divider.full-width:before {
 	top: 10px;
-}
-
-track.title {
-	display: inline-block !important;
-  border: 1px solid rgba(255,133,0,0.44) !important;
-  background: #fff!important;
-  text-transform: uppercase !important;
-  font-size: 10px !important;
-  padding: 3px 8px 2px 12px !important;
-  letter-spacing: .3em !important;
-  color: rgba(0,0,0,0.6) !important;
-  position: relative !important;
-  text-align: center !important;
-}
-
-.header-center {
-	border-bottom: 1px solid rgba(255,133,0,1) !important;
-	text-align: center;
-	padding-left: 6em;
-}
-
-a:link, a:visited, a:active {
-  color: rgba(255,133,0,0.5);
-  text-decoration: none;
-  transition: color 0.75s;
-}
-
-/* mouse over link */
-a:hover {
-  color: rgba(255,133,0,1) !important;
-  text-decoration: none !important;
-}
-
-.logo {
-	display: inline;
-	margin-top: 1em;
-	padding-top: 4em;
-	text-align: center;
-}
-
-.center-text {
-	text-align: center;
-}
-
-.main-body {
-	position: relative;
-	top: 4em;
-}
-
-.main-body-genre {
-	position: relative;
-	top: 6em;
 }
 
 .block {
@@ -183,7 +184,7 @@ a:hover {
 }
 
 
-/* -----------------------RESPONSIVE DESIGN CHOICES -------------- /*
+/* <------ RESPONSIVE DESIGN CHOICES ------> /*
 
 /* Large desktop */
 @media (min-width: 1200px) {
