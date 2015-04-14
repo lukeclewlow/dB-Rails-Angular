@@ -17,7 +17,6 @@ tunesControllers.controller('IndexCtrl', ['$http', '$scope', function($http, $sc
     self.mostRecentTune = self.tunes.shift();
     self.otherTunes = self.tunes;
   });
-
 }]);
 
 tunesControllers.controller('AddTunesCtrl', ['$http', '$scope', function($http, $scope) {
@@ -52,6 +51,5 @@ tunesControllers.controller('GenreCtrl', ['$http', '$scope', '$routeParams', fun
     },
       function(errResponse) {
       console.error('Error whilst fetching links');
-    }
-  );
+    });
 }]);

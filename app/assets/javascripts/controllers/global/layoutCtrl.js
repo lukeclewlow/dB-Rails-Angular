@@ -10,6 +10,5 @@ layoutController.controller('LayoutCtrl', ['$http', function($http) {
     }, 
     	function(errResponse) {
       console.error('Error whilst fetching links');
-  	}
-  );
+  	});
 }]);
