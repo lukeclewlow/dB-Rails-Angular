@@ -1,6 +1,6 @@
-$(document).scroll(function(){
+$(document).on('scroll', function(){
     if($(this).scrollTop() > 1)
-    {   
+    {  
         $('.heading').animate({
         	"width":"50%",
         	"margin-left":"25%"
@@ -10,7 +10,7 @@ $(document).scroll(function(){
     }
 });
 
-$(document).scroll(function(){
+$(document).on('scroll', function(){
     if($(this).scrollTop() > 110)
     {   
         $('.full-width').animate({
