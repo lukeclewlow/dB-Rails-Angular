@@ -1,4 +1,16 @@
 $(document).scroll(function(){
+    if($(this).scrollTop() > 1)
+    {   
+        $('.heading').animate({
+        	"width":"50%",
+        	"margin-left":"25%"
+        }, 2000, function() {
+        	console.log("heading animation complete");
+        });
+    }
+});
+
+$(document).scroll(function(){
     if($(this).scrollTop() > 100)
     {   
         $('.full-width').animate({

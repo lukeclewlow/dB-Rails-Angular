@@ -104,8 +104,6 @@ track.title {
 }
 
 divider {
-	margin-left: 25%;
-	width: 50%;
   position: relative !important;
   text-align: center !important;
   line-height: 1.2 !important;
@@ -120,6 +118,11 @@ divider:before {
   top: 14px;
   width: 100%;
   border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+divider.heading {
+	margin-left: 38%;
+	width: 24%;
 }
 
 iframe {
