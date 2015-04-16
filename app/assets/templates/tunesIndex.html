@@ -27,7 +27,7 @@
     </container>
   </row>
 
-  <section ng-controller="AddTunesCtrl as ctrl">
+  <section ng-controller="AddTunesCtrl">
     <form name="tune"
           class="form">
     <input type="text"
@@ -50,13 +50,15 @@
            id="link"
            ng-model="tune.link"
            required>
-    <select id="genreSelect" ng-model="tune.genre_id">
-      <option value="1">DnB</option>
-    </select>       
+    <select ng-model="tune.genre_id" 
+            ng-options="genre.id as genre.name for genre in genres">
+            <option value="">[-genre-]</option>
+    </select>  
+
     <input type="submit"
            id="submit_btn"
            value="Add"
-           ng-click="ctrl.add()">
+           ng-click="add()">
     </form>
   </section>
 

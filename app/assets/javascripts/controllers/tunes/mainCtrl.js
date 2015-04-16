@@ -35,3 +35,12 @@ dbApp.factory("Tune", function($resource) {
     }
   );
 });
+
+dbApp.factory('getGenres', function($http) {
+  var getGenres = {};
+
+  getGenres.getData = function() {
+    return $http.get('all_genres.json');
+  };
+  return getGenres;
+});

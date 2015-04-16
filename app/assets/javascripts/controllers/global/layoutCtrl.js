@@ -1,14 +1,14 @@
-var layoutController = angular.module('layoutController', [])
+var layoutController = angular.module('layoutController', ['dbApp'])
 
-layoutController.controller('LayoutCtrl', ['$http', function($http) {
+layoutController.controller('LayoutCtrl', ['$http', 'getGenres', function($http, getGenres) {
   var self = this;
   self.genres = [];
 
-  $http.get('all_genres.json').
-    then(function(response) {
-      self.genres = response.data;
-    }, 
-    	function(errResponse) {
-      console.error('Error whilst fetching links');
-  	});
+  getGenres.getData()
+  	.success(function (genres) {
+      self.genres = genres;
+    })
+    .error(function (error) {
+      console.error('Error whilst fetching links') + error.message;
+    });
 }]);

@@ -1,4 +1,4 @@
-var tunesControllers = angular.module('tunesControllers', [])
+var tunesControllers = angular.module('tunesControllers', ['dbApp'])
 
 tunesControllers.controller('IndexCtrl', ['$http', '$scope', function($http, $scope) {
   var self = $scope;
@@ -19,10 +19,20 @@ tunesControllers.controller('IndexCtrl', ['$http', '$scope', function($http, $sc
   });
 }]);
 
-tunesControllers.controller('AddTunesCtrl', ['$http', '$scope', function($http, $scope) {
+tunesControllers.controller('AddTunesCtrl', ['$http', '$scope', 'getGenres', function($http, $scope, getGenres) {
   var self = $scope;
 
-  this.add = function() {
+  self.genres = [];
+
+  getGenres.getData()
+    .success(function (genres) {
+      self.genres = genres;
+    })
+    .error(function (error) {
+      console.error('Error whilst fetching links') + error.message;
+    });
+
+  self.add = function() {
 
     var dataObject = {
           artist: self.tune.artist
