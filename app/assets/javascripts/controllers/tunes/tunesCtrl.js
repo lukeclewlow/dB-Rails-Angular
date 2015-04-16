@@ -29,6 +29,7 @@ tunesControllers.controller('AddTunesCtrl', ['$http', '$scope', function($http, 
           ,title: self.tune.title
           ,blog: self.tune.blog
           ,link: self.tune.link
+          ,genre_id: self.tune.genre_id
        };
 
     $http.post('tunes', dataObject)
