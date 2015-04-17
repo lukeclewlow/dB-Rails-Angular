@@ -50,9 +50,10 @@
            id="link"
            ng-model="tune.link"
            required>
-    <select ng-model="tune.genre_id" 
+    <select ng-model="tune.genre_id"
+            id="genre"
             ng-options="genre.id as genre.name for genre in genres">
-            <option value="Genre">Genre</option>
+            <option value="">Genre</option>
     </select>  
 
     <input type="submit"
