@@ -17,18 +17,18 @@ feature 'tunes on the blog' do
 
 		scenario 'should see the title of the tune', :js => true do
 			visit('/')
-			expect(page).to have_content("Who Knows")
+			expect(page).to have_content("WHO KNOWS")
 			expect(page).not_to have_content("Nothing here yet")
 		end
 
 		scenario 'should see the artist of the tune', :js => true do
 			visit('/')
-			expect(page).to have_content("Chronixx")
+			expect(page).to have_content("CHRONIXX")
 		end
 
 		scenario 'an embedded video should appear', :js => true do
 			visit('/')
-			expect(page).to have_css('iframe.video')
+			expect(page).to have_css('iframe')
 		end
 	end
 
