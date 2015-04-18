@@ -3,7 +3,7 @@ var dbApp = angular.module('dbApp', ['ngRoute', 'tunesControllers', 'layoutContr
 dbApp.config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
     'self',
-    'https://www.youtube.com/embed/**'
+    'https://www.youtube.com/**'
   ]);
 });
 

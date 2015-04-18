@@ -14,7 +14,7 @@ feature 'adding a tune to the blog' do
 			fill_in('Artist?', :with => 'Hidden Orchestra')
 			fill_in('Title?', :with => 'Live')
 			fill_in('Blog?', :with =>'Blah')
-			fill_in('Link?', :with =>'https://www.youtube.com/embed/bcE4EaAJr_8')
+			fill_in('YouTube Link?', :with =>'https://www.youtube.com/embed/bcE4EaAJr_8')
 			select("DnB", :from => "genre")
 			click_button('Add')
 			visit('/')

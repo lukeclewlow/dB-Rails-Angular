@@ -32,13 +32,21 @@ tunesControllers.controller('AddTunesCtrl', ['$http', '$scope', 'getGenres', fun
       console.error('Error whilst fetching links') + error.message;
     });
 
+  self.modifyLink = function(){
+    if(self.tune.link.indexOf("watch") >= 0){
+      return self.tune.link.replace("watch?v=", "embed/");
+      console.log("updating");
+    }
+    else { return self.tune.link };
+  };
+
   self.add = function() {
 
     var dataObject = {
           artist: self.tune.artist
           ,title: self.tune.title
           ,blog: self.tune.blog
-          ,link: self.tune.link
+          ,link: self.modifyLink()
           ,genre_id: self.tune.genre_id
        };
 
