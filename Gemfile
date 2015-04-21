@@ -27,6 +27,7 @@ gem 'bootstrap-sass'
 gem 'responders'
 gem 'non-stupid-digest-assets'
 gem 'turbolinks'
+gem 'devise_token_auth'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
