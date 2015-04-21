@@ -1,4 +1,4 @@
-var dbApp = angular.module('dbApp', ['ngRoute', 'tunesControllers', 'layoutController'])
+var dbApp = angular.module('dbApp', ['ngRoute', 'tunesControllers', 'layoutController', 'ng-token-auth'])
 
 dbApp.config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
