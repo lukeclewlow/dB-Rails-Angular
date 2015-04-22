@@ -18,3 +18,5 @@
 //= require angular-route
 //= require animations
 //= require jquery.bootstrap.autohidingnavbar
+//= require ng-token-auth
+//= require angular-cookie.js

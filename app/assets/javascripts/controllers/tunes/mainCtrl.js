@@ -18,6 +18,10 @@ dbApp.config(['$routeProvider', function($routeProvider) {
       templateUrl: "../assets/genreIndex.html",
       controller: 'GenreCtrl'
     })
+    .when('/sign_in', {
+      templateUrl: '../assets/user_sessions/new.html',
+      controller: 'UserSessionsCtrl'
+    })
     .otherwise({
       templateUrl: "../assets/tunesIndex.html",
       controller: 'IndexCtrl'
