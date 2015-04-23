@@ -1,4 +1,4 @@
-var dbApp = angular.module('dbApp', ['ngRoute', 'tunesControllers', 'layoutController', 'ng-token-auth'])
+var dbApp = angular.module('dbApp', ['ngRoute', 'tunesControllers', 'layoutController', 'loginControllers', 'Devise' ])
 
 dbApp.config(function($sceDelegateProvider) {
   $sceDelegateProvider.resourceUrlWhitelist([
@@ -19,8 +19,8 @@ dbApp.config(['$routeProvider', function($routeProvider) {
       controller: 'GenreCtrl'
     })
     .when('/sign_in', {
-      templateUrl: '../assets/user_sessions/new.html',
-      controller: 'UserSessionsCtrl'
+      templateUrl: '../assets/signIn.html',
+      controller: 'LoginCtrl'
     })
     .otherwise({
       templateUrl: "../assets/tunesIndex.html",

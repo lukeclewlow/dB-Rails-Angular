@@ -20,3 +20,4 @@
 //= require jquery.bootstrap.autohidingnavbar
 //= require ng-token-auth
 //= require angular-cookie.js
+//= require devise.js

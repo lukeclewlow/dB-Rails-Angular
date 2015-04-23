@@ -27,10 +27,9 @@ gem 'bootstrap-sass'
 gem 'responders'
 gem 'non-stupid-digest-assets'
 gem 'turbolinks'
-gem 'devise'
-gem 'devise_token_auth'
 gem 'omniauth'
-
+gem 'devise'  
+gem 'angular_rails_csrf'  
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -60,3 +59,6 @@ group :development, :test do
 end
 end
 
+source "https://rails-assets.org" do
+  gem "rails-assets-angular-devise"
+end
