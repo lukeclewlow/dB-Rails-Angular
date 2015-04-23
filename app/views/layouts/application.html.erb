@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html ng-app="dbApp">
-<head>
-  <title>Db2</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application', controller_name %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<container ng-controller="LayoutCtrl as layoutCtrl">
-		<nav class="navbar-fixed-top header-center">		
-			<ul class="nav nav-pills ">
-				<a href="#"><h1 class="logo">d(-_-)b</h1></a>
-		    <li class="dropdown pull-right">
-		        <button data-toggle="dropdown" class="dropdown-toggle">Genres<b class="caret"></b></button>
-		        <ul class="dropdown-menu">
-		        	<container ng-repeat="genre in layoutCtrl.genres">
-			          <li><a href="#/{{genre.id}}">{{genre.name}}</a></li>
-			        </container>
-		        </ul>
-		    </li>
-			</ul>
-		</nav>
+	<head>
+	  <title>Db2</title>
+	  <%= stylesheet_link_tag    'application', media: 'all' %>
+	  <%= javascript_include_tag 'application', controller_name %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<container ng-controller="LayoutCtrl as layoutCtrl">
+			<nav class="navbar-fixed-top header-center">		
+				<ul class="nav nav-pills ">
+					<a href="#"><h1 class="logo">d(-_-)b</h1></a>
+			    <li class="dropdown pull-right">
+			        <button data-toggle="dropdown" class="dropdown-toggle">Genres<b class="caret"></b></button>
+			        <ul class="dropdown-menu">
+			        	<container ng-repeat="genre in layoutCtrl.genres">
+				          <li><a href="#/{{genre.id}}">{{genre.name}}</a></li>
+				        </container>
+			        </ul>
+			    </li>
+				</ul>
+				<ul class="nav nav-pills pull-right" ng-controller="sessionCtrl as session">
+			    <li role="presentation"><a href="#/">Home</a></li>
+			    <li role="presentation" ng-hide="isAuthenticated"><a href="#/sign_in">Sign In</a></li>
+			    <li role="presentation" ng-show="isAuthenticated"><a href ="" ng-click="session.logout()">Logout</a></li>
+			  </ul>
+			</nav>
+		</container>
+
+		<%= yield %>
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
 	</container>
-
-<%= yield %>
-
-</container>
-</body>
+	</body>
 </html>
