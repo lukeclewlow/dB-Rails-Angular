@@ -27,6 +27,7 @@ gem 'bootstrap-sass'
 gem 'responders'
 gem 'non-stupid-digest-assets'
 gem 'turbolinks'
+gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
 
