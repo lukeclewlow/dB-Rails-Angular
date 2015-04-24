@@ -52,7 +52,7 @@ loginControllers.controller('sessionCtrl', ['Auth', '$scope', '$location',
           alert("Successfully logged out!");
           $location.path("/");
         }, function(error) {
-          // An error occurred logging out.
+          console.log("error");
         });
       }
     }
