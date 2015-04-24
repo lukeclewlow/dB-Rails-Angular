@@ -27,40 +27,46 @@
     </container>
   </row>
 
-  <section ng-controller="AddTunesCtrl">
-    <form name="tune"
-          class="form">
-    <input type="text"
-           placeholder="Artist?"
-           id="artist"
-           ng-model="tune.artist"
-           required>
-    <input type="text"
-           placeholder="Title?"
-           id="title"
-           ng-model="tune.title"
-           required>
-    <input type="text"
-           placeholder="Blog?"
-           id="blog"
-           ng-model="tune.blog"
-           required>
-    <input type="text"
-           placeholder="YouTube Link?"
-           id="link"
-           ng-model="tune.link"
-           required>
-    <select ng-model="tune.genre_id"
-            id="genre"
-            ng-options="genre.id as genre.name for genre in genres">
-            <option value="">Genre</option>
-    </select>  
+  <container ng-controller="sessionCtrl as session" ng-show="isAuthenticated">
 
-    <input type="submit"
-           id="submit_btn"
-           value="Add"
-           ng-click="add()">
-    </form>
-  </section>
+    <span class="" ng-show="isAuthenticated"><a href ="" ng-click="session.logout()">Logout</a></li>
+
+    <section ng-controller="AddTunesCtrl">
+      <form name="tune"
+            class="form">
+      <input type="text"
+             placeholder="Artist?"
+             id="artist"
+             ng-model="tune.artist"
+             required>
+      <input type="text"
+             placeholder="Title?"
+             id="title"
+             ng-model="tune.title"
+             required>
+      <input type="text"
+             placeholder="Blog?"
+             id="blog"
+             ng-model="tune.blog"
+             required>
+      <input type="text"
+             placeholder="YouTube Link?"
+             id="link"
+             ng-model="tune.link"
+             required>
+      <select ng-model="tune.genre_id"
+              id="genre"
+              ng-options="genre.id as genre.name for genre in genres">
+              <option value="">Genre</option>
+      </select>  
+
+      <input type="submit"
+             id="submit_btn"
+             value="Add"
+             ng-click="add()">
+      </form>
+    </section>
+
+  </container>
 
 </container>

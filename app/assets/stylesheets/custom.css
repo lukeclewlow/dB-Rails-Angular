@@ -184,6 +184,9 @@ divider.full-width:before {
 	text-align: center;
 }
 
+.nav-list {
+	display: inline;
+}
 
 /* <------ RESPONSIVE DESIGN CHOICES ------> /*
 
