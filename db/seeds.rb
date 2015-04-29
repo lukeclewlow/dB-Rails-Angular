@@ -17,3 +17,5 @@ tunes = Tune.create([
   {artist: 'Scientist', title: 'Galaxy', blog: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu", link: 'https://www.youtube.com/embed/NYqBQc3aFAU', genre_id: 6}, 
   {artist: 'Djrum', title: 'The Miracle pt. 1 and 2', blog: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu", link: 'https://www.youtube.com/embed/M1I5Vl93eZs', genre_id: 7}
   ])
+
+users = User.create({ email: 'a@a.com', password: '1qaz2wsx' })

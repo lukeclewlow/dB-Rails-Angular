@@ -212,6 +212,7 @@ divider.full-width:before {
 		width: 504px;
 		height: 283px;
 	}
+
 }
  
 /* Landscape phone to portrait tablet */
@@ -220,10 +221,26 @@ divider.full-width:before {
 		width: 504px;
 		height: 283px;
 	}
+
+	.main-blog {
+		padding-top: 2%;
+		/*margin-left: 10%;*/
+		width: 50%;
+		padding-right: 0;
+		padding-left: 0;
+	}
 }
  
 /* Landscape phones and down */
 @media (max-width: 480px) {
+	.main-blog {
+		padding-top: 2%;
+		margin-left: 10%;
+		margin-right: 10%;
+		width: 50%;
+		padding-right: 0;
+		padding-left: 0;
+	}
 
 }
 
