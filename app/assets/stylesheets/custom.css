@@ -192,6 +192,16 @@ divider.full-width:before {
 
 /* Large desktop */
 @media (min-width: 1200px) {
+	iframe.smaller-video {
+		display: block;
+/*		margin-left: 5em;
+		margin-right: 5em;*/
+	}
+
+	blog {
+		display: inline-block;
+	}
+
 	iframe.larger-video {
 		width: 504px;
 		height: 283px;
