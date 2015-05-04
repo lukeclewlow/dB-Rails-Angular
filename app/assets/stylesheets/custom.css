@@ -194,8 +194,13 @@ divider.full-width:before {
 @media (min-width: 1200px) {
 	iframe.smaller-video {
 		display: block;
+		width: 80%;
 /*		margin-left: 5em;
 		margin-right: 5em;*/
+	}
+
+	.small_tune {
+		width: 33%;
 	}
 
 	blog {
