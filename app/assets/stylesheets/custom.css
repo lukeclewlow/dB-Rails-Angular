@@ -11,6 +11,9 @@ html {
   -moz-font-feature-settings: "liga" on;
   color: rgba(0,0,0,0.8);
   font-size: 18px;
+  max-width: 1199px;
+  margin: 0 auto;
+  background-color: grey;
 }
 
 *, *:before, *:after {
@@ -48,6 +51,8 @@ nav {
 	height: 8%;
 	background-color: #333 !important;
 	opacity: 0.9;
+	max-width: 1199px;
+	margin: 0 auto;
 }
 
 button {
