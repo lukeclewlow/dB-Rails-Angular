@@ -13,8 +13,7 @@ html {
   font-size: 18px;
   max-width: 1400px;
   margin: 0 auto;
-  background-color: grey;
-  border: 1px solid rgba(255,133,0,1) !important;
+  background-color: #f2f2f2 !important;
 }
 
 *, *:before, *:after {
@@ -52,7 +51,7 @@ nav {
 	height: 8%;
 	background-color: #333 !important;
 	opacity: 0.9;
-	max-width: 1400px;
+	/*max-width: 1400px;*/
 	margin: 0 auto;
 }
 
