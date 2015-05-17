@@ -91,6 +91,11 @@ ul {
 	border: 1px solid rgba(255,133,0,1) !important;
 }
 
+.home {
+	margin-left: -5em;
+	float: left;
+}
+
 /* <------ MAIN PAGE ------> */
 
 midcol {
