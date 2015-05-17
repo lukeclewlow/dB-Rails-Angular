@@ -87,7 +87,8 @@ ul {
 }
 
 .dropdown-menu {
-	margin-top: 2em !important;
+	margin-top: 1.2em !important;
+	border: 1px solid rgba(255,133,0,1) !important;
 }
 
 /* <------ MAIN PAGE ------> */
