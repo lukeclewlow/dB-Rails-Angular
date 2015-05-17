@@ -86,6 +86,10 @@ ul {
 	text-align: center;
 }
 
+.dropdown-menu {
+	margin-top: 2em !important;
+}
+
 /* <------ MAIN PAGE ------> */
 
 midcol {
