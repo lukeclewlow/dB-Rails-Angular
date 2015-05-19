@@ -21,7 +21,7 @@ loginControllers.controller('LoginCtrl', [
 }]);
 
 loginControllers.controller('sessionCtrl', ['Auth', '$scope', '$location',
-    function(Auth, $scope) {
+    function(Auth, $scope, $location) {
       // Check on load if user signed in
       Auth.currentUser().then(function(user) {
         $scope.isAuthenticated = true;

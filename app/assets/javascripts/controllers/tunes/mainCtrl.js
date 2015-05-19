@@ -7,6 +7,11 @@ dbApp.config(function($sceDelegateProvider) {
   ]);
 });
 
+// dbApp.config(function(AuthProvider) {
+//   AuthProvider.logoutPath('/users/sign_out.json');
+//   AuthProvider.logoutMethod('DELETE');
+// });
+
 dbApp.config(function($httpProvider) {
   $httpProvider.defaults.headers.common['X-CSRF-Token'] =
     $('meta[name=csrf-token]').attr('content');

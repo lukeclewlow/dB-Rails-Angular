@@ -1,7 +1,14 @@
-### dB Rails-Angular
+# dB
 
-A basic music blog, and an experimentation with Angular as front end and Rails as back end.
+### My Objectives
 
-Includes the ability for an admin to login and post new links, and the links as filterable by Genre.
+To build a basic music blog using Angular as front end and Rails as a back end.
+
+To include:
+
+	[ ] Responsive Layout
+	[ ] Hideable Navigation
+	[ ] Filtering by Genre
+	[ ] The ability for an admin to login and post new links
 
 [Preview of dB so far](https://d-b.herokuapp.com/)
