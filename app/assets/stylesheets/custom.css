@@ -25,8 +25,8 @@ body {
 }
 
 a:link, a:visited, a:active {
-  color: rgba(255,133,0,0.5);
-  text-decoration: none;
+  color: rgba(255,133,0,0.5) !important;
+  text-decoration: none !important;
   transition: color 0.75s;
 }
 
